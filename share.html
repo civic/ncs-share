@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/cal-heatmap/3.3.10/cal-heatmap.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/cal-heatmap/3.3.10/cal-heatmap.min.js"></script>
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@civic">
+    <meta name="og:title" content="今日の進捗$TODAY_COUNT回/今月$MONTH_COUNT回, $TODAY_FMT">
+    <meta name="og:description" content="今日の進捗$TODAY_COUNT回 / 今月$MONTH_COUNT回($MONTH_PERIOD分), $TODAY_FMT">
+    <meta name="og:image" content="http://ncs.civic-apps.com/s/ncs-$HASH.png">
+
+    <title>今日の進捗$TODAY_COUNT回 ($TODAY_FMT)- NCSuppor-Ext</title>
+    <style type="text/css">
+        body {
+            margin-top: 5px;
+            background-color: rgb(240, 240, 240);
+        }
+
+        h1.card-header {
+            font-size: 1.2em;
+        }
+
+        .card-title {
+            margin-bottom: 0.5em;
+        }
+
+        .card-text {
+            line-height: 1.2;
+        }
+
+        .bignumber {
+            font-size: 3em;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+        .middlenumber {
+            font-size: 2.0em;
+            padding-right: 0.3em;
+        }
+
+        .fas,
+        .far {
+            color: #2EBE24;
+        }
+
+        .btn-facebook {
+            background-color: #29487d;
+            border-color: #29487d;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container" style="max-width: 500px;">
+        <div class="justify-content-md-center">
+            <div class=" card border-success">
+                <h1 class="card-header text-white bg-success">ネイティブキャンプやりました！</h1>
+                <div class="card-body">
+                    <h5 class="card-title"><i class="far fa-check-circle mr-2"></i>
+                        今日の実施レッスン
+                    </h5>
+                    <div class="row">
+                        <div class="col-sm-5">
+                            <p class="card-text text-center">
+                                <span class="bignumber">$TODAY_COUNT</span>回</br>
+                                <span>($TODAY_FMT)</span>
+                            </p>
+                        </div>
+                        <div class="col-sm-7">
+                            $TODAY_LESSONS
+                        </div>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col text-center">
+                            <a href="https://twitter.com/intent/tweet$TWITTERQS" target="ncsupportext" class="btn btn-primary">
+                                <i class="fab fa-twitter mr-1" style="color: #ffffff; font-size: 1.5em;"></i>
+                                Twitter
+                            </a>
+                            <a href="https://www.facebook.com/sharer/sharer.php?u=$SHARE_URL" target="ncsupportext-facebook"
+                                class="btn btn-primary btn-facebook">
+                                <i class="fab fa-facebook-f mr-1" style="color: #ffffff; font-size: 1.5em;"></i>
+                                Facebook
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card border-success mt-1">
+                <div class="card-body">
+                    <h5 class="card-title"><i class="far fa-calendar-alt mr-2"></i>今月の実施レッスン</h5>
+                    <div class="row">
+                        <div class="col d-flex justify-content-center align-items-end">
+                            <div class="card-text">
+                                <span class="bignumber">$MONTH_COUNT</span>回
+                            </div>
+                        </div>
+                        <div class="col d-flex align-items-end">
+                            <div class="card-text">
+                                <span class="middlenumber">$MONTH_PERIOD</span>分
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row d-flex justify-content-center">
+                        <figure class="figure mt-2">
+                            <div id="cal-heatmap"></div>
+                            <figcaption class="figure-caption">$MONTH_NUM月 レッスン回数ヒートマップ </figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+            <div class="card border-success mt-1">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col">
+                            <h5 class="card-title">
+                                <i class="fas fa-chart-line mr-2"></i>
+                                <span class="d-inline-block">週間</span><span class="d-inline-block">実施ペース</span>
+                            </h5>
+                            <div class="d-flex justify-content-center align-items-end">
+                                <div class="card-text">
+                                    <span class="middlenumber">$AVG_PACE</span>
+                                    <span class="d-inline-block">時間/週</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <h5 class="card-title">
+                                <i class="far fa-clock mr-1"></i>
+                                <span>総レッスン</span><span class="d-inline-block">時間</span>
+                            </h5>
+                            <div class="d-flex justify-content-center align-items-end">
+                                <div class="card-text">
+                                    <span class="middlenumber">$TOTAL_HOURS</span><span class="d-inline-block pr-3">時間</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col text-right">
+                <div class="col text-right font-italic">$TODAY_FMT</div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col text-right" style="font-size: 0.9em">
+                このページはChrome拡張「<img src="icon16.png" /><a href="https://lets-english.hateblo.jp/entry/2018/09/10/115605">NCSupport</a>」で作成されました。
+            </div>
+        </div>
+
+    </div>
+    <script type="text/javascript">
+        const cal = new CalHeatMap();
+        cal.init({
+            start: new Date("$MONTH_1ST"),
+            domain: "month",
+            subDomain: "x_day",
+            domainMargin: 5,
+            weekStartOnMonday: false,
+            legend: [1, 2, 3],
+            displayLegend: false,
+            cellSize: 18,
+            range: 1,
+            itemName: ["回受講", "回受講"],
+            subDomainDateFormat: "%Y年%m月%d日",
+            subDomainTextFormat: "%d",
+            domainLabelFormat: "",
+            data: $HEATMAP
+        });
+    </script>
+</body>
+
+</html>
