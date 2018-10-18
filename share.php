@@ -100,7 +100,7 @@ $total_hours = htmlspecialchars($p[6]);
 create_image($hash, $today_count, $month_count, $today_fmt);
 
 # シェア用URL
-$shareurl = "http://ncs.civic-apps.com/s/$hash";
+$shareurl = "https://ncs.civic-apps.com/s/$hash";
 $twitterqs = "?url=" . $shareurl 
     . "&text=" . "今日は${today_count}回レッスンをしました！"
     . "(今月${month_count}回, 累計${total_hours}h, 週ペース${avg_pace}h)"

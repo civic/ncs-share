@@ -5,6 +5,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-2256303-16"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-2256303-16');
+    </script>
+
+    <link rel="shortcut icon" type="image/vnd.microsoft.icon" href="../favicon.ico">
+    <link rel="icon" type="image/vnd.microsoft.icon" href="../favicon.ico">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
         crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
@@ -15,11 +27,11 @@
 
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@civic">
-    <meta name="og:title" content="今日の進捗$TODAY_COUNT回/今月$MONTH_COUNT回, $TODAY_FMT">
-    <meta name="og:description" content="今日の進捗$TODAY_COUNT回 / 今月$MONTH_COUNT回($MONTH_PERIOD分), $TODAY_FMT">
+    <meta name="og:title" content="今日の進捗$TODAY_COUNT回, 今月$MONTH_COUNT回, $TODAY_FMT">
+    <meta name="og:description" content="今日$TODAY_COUNT回, 今月$MONTH_COUNT回($MONTH_PERIOD分), 週ペース$AVG_PACE時間">
     <meta name="og:image" content="http://ncs.civic-apps.com/s/ncs-$HASH.png">
 
-    <title>今日の進捗$TODAY_COUNT回 ($TODAY_FMT)- NCSuppor-Ext</title>
+    <title>今日の進捗$TODAY_COUNT回 ($TODAY_FMT)- NCSupporExt</title>
     <style type="text/css">
         body {
             margin-top: 5px;
