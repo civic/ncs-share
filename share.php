@@ -32,7 +32,6 @@ function create_image($hash, $today, $month, $today_fmt){
     # 右寄せ計算
     $dim = imagettfbbox(100, 0, $font, $today);
     $textwidth = $dim[4] - $dim[6];
-
     imagettftext($image, 100, 0, (190 - $textwidth), 260, $color, $font, 
         $today);
     
@@ -40,9 +39,10 @@ function create_image($hash, $today, $month, $today_fmt){
     # 右寄せ計算
     $dim = imagettfbbox(100, 0, $font, $month);
     $textwidth = $dim[4] - $dim[6];
-
     imagettftext($image, 100, 0, (500 - $textwidth), 260, $color, $font, $month);
-    imagettftext($image, 12, 0, 520, 310, $color, $font, $today_fmt);
+
+    # タイムスタンプ
+    imagettftext($image, 12, 0, 520, 300, $color, $font, $today_fmt);
 
     imagepng($image, "s/ncs-${hash}.png");
     imagedestroy($image);
