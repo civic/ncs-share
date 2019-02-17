@@ -61,6 +61,7 @@ $today = date_create_from_format('Ymd', htmlspecialchars($p[0]));
 $month_1st = date_create_from_format('Ymd', substr(htmlspecialchars($p[0]), 0, 6)."01");
 # 表示用日付情報
 $today_fmt = $today->format('Y/m/d');
+$today_fmt_short = $today->format('m/d');
 $month_num = $today->format('m');
 
 $today_count = htmlspecialchars($p[1]);
@@ -102,7 +103,7 @@ create_image($hash, $today_count, $month_count, $today_fmt);
 # シェア用URL
 $shareurl = "https://ncs.civic-apps.com/s/$hash";
 $twitterqs = "?url=" . $shareurl 
-    . "&text=" . "今日は${today_count}回レッスンをしました！"
+    . "&text=" . "${today_fmt_short}は${today_count}回レッスンをしました！"
     . "(今月${month_count}回, 累計${total_hours}h, 週ペース${avg_pace}h)"
     . "&hashtags=" . "ネイティブキャンプ,NCSupportExt";
 
