@@ -29,8 +29,8 @@
      inkscape:pageopacity="1"
      inkscape:pageshadow="2"
      inkscape:zoom="1.4"
-     inkscape:cx="274.08045"
-     inkscape:cy="148.72639"
+     inkscape:cx="132.65188"
+     inkscape:cy="120.15496"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -97,14 +97,14 @@
          id="flowPara827">今日の実施レッスン</flowPara></flowRoot>    <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.58333302px;line-height:1.25;font-family:Dyuthi;-inkscape-font-specification:Dyuthi;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-       x="20.346245"
+       x="18.229576"
        y="247.31743"
        id="text831"><tspan
          sodipodi:role="line"
          id="tspan829"
-         x="20.346245"
+         x="18.229576"
          y="247.31743"
-         style="font-size:7.76111126px;stroke-width:0.26458332">今日のレッスン</tspan></text>
+         style="font-size:7.76111126px;stroke-width:0.26458332">この日のレッスン</tspan></text>
     <flowRoot
        xml:space="preserve"
        id="flowRoot841"
@@ -191,5 +191,16 @@
        d="m 148.53504,222.40002 c 0.1692,-0.28649 0.26489,-0.59208 0.26489,-0.96154 0,-0.84916 -0.71803,-1.65106 -1.65569,-1.65106 h -0.70379 c 0.0949,-0.24714 0.17074,-0.5427 0.17074,-0.89787 0,-1.40439 -0.72713,-2.02052 -1.83801,-2.02052 -1.18855,0 -1.12076,1.8315 -1.38443,2.09517 -0.43885,0.43886 -0.9572,1.28194 -1.32655,1.609 h -1.90534 c -0.34097,0 -0.61737,0.27641 -0.61737,0.61737 v 4.63022 c 0,0.34095 0.2764,0.61736 0.61737,0.61736 h 1.23473 c 0.28732,0 0.52876,-0.19629 0.59764,-0.46206 0.85869,0.0193 1.4481,0.77055 3.43025,0.77055 0.1393,0 0.29364,2.2e-4 0.42869,2.2e-4 1.48778,0 2.1605,-0.76057 2.1789,-1.83917 0.25696,-0.35546 0.39163,-0.83193 0.33453,-1.29241 0.19011,-0.35597 0.26362,-0.77832 0.17344,-1.21523 z m -1.19131,1.03852 c 0.24232,0.40766 0.0243,0.95324 -0.26894,1.11067 0.14855,0.94109 -0.3397,1.27138 -1.02482,1.27138 h -0.72965 c -1.3821,0 -2.27708,-0.72964 -3.31138,-0.72964 v -3.5917 h 0.21068 c 0.54713,0 1.31151,-1.36765 1.82392,-1.88025 0.54713,-0.54714 0.36482,-1.4591 0.72964,-1.82392 0.91196,0 0.91196,0.63626 0.91196,1.09447 0,0.75568 -0.54714,1.09427 -0.54714,1.82392 h 2.00624 c 0.40727,0 0.72791,0.36482 0.72965,0.72964 0.002,0.36462 -0.24733,0.72946 -0.42965,0.72946 0.26024,0.28079 0.31584,0.87271 -0.10051,1.26597 z m -6.10649,1.76489 c 0,0.25572 -0.2073,0.46302 -0.46302,0.46302 -0.25573,0 -0.46302,-0.2073 -0.46302,-0.46302 0,-0.25572 0.20729,-0.46303 0.46302,-0.46303 0.25572,0 0.46302,0.20731 0.46302,0.46303 z"
        inkscape:connector-curvature="0"
        style="fill:#ffffff;fill-opacity:1;stroke-width:0.26458332" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.58333302px;line-height:1.25;font-family:IPAexゴシック;-inkscape-font-specification:IPAexゴシック;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="35.340775"
+       y="247.67409"
+       id="text844"><tspan
+         sodipodi:role="line"
+         id="tspan842"
+         x="35.340775"
+         y="258.30908"
+         style="stroke-width:0.26458332" /></text>
   </g>
 </svg>
